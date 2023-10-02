@@ -19,7 +19,7 @@
     "main": "index.js",
     "devDependencies": {},
     "scripts": {
-        "start": "node index.js"
+        "start": "node Server.js"
     },
     "keywords": [],
     "author": "",
