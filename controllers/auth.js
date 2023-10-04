@@ -10,6 +10,7 @@ export const register = async (req, res) => {
             lastName,
             email,
             password,
+            picturePath,
             friends,
             location,
             occupation,
@@ -18,15 +19,12 @@ export const register = async (req, res) => {
         const salt = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, salt);
 
-        const filePath = req.file.path;
-        const fileName = filePath.split("\\").pop();
-
         const newUser = new User({
             firstName,
             lastName,
             email,
             password: passwordHash,
-            picturePath: fileName,
+            picturePath,
             friends,
             location,
             occupation,
