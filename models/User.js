@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema(
         },
         picturePath: {
             type: String,
-            default: "",
+            default: "https://i.ibb.co/z2GzvDG/7.webp",
         },
         friends: {
             type: Array,
