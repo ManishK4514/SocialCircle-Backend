@@ -57,6 +57,10 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 app.use("/comments", commentRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Api is awaking...");
+});
+
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
 mongoose
